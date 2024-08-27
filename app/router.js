@@ -4,11 +4,17 @@
 import { Router } from "express"; // { Router, urlencoded, static }
 import { mainController } from "./controllers/main.controller.js";
 import { levelController } from "./controllers/level.controller.js";
+import { quizController } from "./controllers/quiz.controller.js";
+import { tagsController } from "./controllers/tags.controller.js";
 
 export const router = Router(); // Export nommé
 
 
 router.get("/", mainController.home);
+
+router.get("/quiz/:id", quizController.renderQuiz);
+
+router.get('/tags', tagsController.renderTags);
 
 router.get("/levels", levelController.renderLevelsPage);
 
