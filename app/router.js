@@ -8,7 +8,7 @@ import { levelController } from "./controllers/level.controller.js";
 export const router = Router(); // Export nommé
 
 
-router.get("/", mainController.renderHomePage);
+router.get("/", mainController.home);
 
 router.get("/levels", levelController.renderLevelsPage);
 
